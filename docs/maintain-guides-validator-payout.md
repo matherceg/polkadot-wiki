@@ -58,7 +58,7 @@ validator, to ensure that your validators remain in the validator set, running m
 will result in a higher return than running a single validator.
 
 For the following example, assume you have 18 DOTs to stake. For simplicity's sake, we will ignore
-nominators. Running a single validator, as in the example above, would net you 2 DOTs in this era.
+nominators. Running a single validator (`vN=1`), as in the example above, would net you 2 DOTs in this era.
 
 ```
 Validator Set Size (v): 4
@@ -68,10 +68,10 @@ Validator 3 Stake (v3):  8 DOTs
 Validator 4 Stake (v4):  7 DOTs
 Payout (p): 8 DOTs
 
-Your payout = (p / v) * 1 = (8 / 4) * 1 = 2
+Your payout = (p / v) * vN = (8 / 4) * 1 = 2
 ```
 
-Running two validators, and splitting the stake equally, would result in the original validator `v4`
+Running two validators (`vN=2`), and splitting the stake equally, would result in the original validator `v4`
 to be kicked out of the validator set, as only the top `v` validators (as measured by stake) are
 selected to be in the validator set. More important, it would also double the reward that you get
 from each era.
@@ -84,7 +84,7 @@ Validator 3 Stake (v3): 9 DOTs
 Validator 4 Stake (v4): 8 DOTs
 Payout (p): 8 DOTs
 
-Your payout = (p / v) * 1 = (8 / 4) * 2 = 4
+Your payout = (p / v) * vN = (8 / 4) * 2 = 4
 ```
 
 With enough stake, you could run more than two validators. However, each validator must have enough
